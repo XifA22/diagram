@@ -1,4 +1,3 @@
-
 import streamlit as st
 
 # Fungsi untuk halaman utama
