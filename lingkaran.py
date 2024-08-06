@@ -3,23 +3,31 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 def tampilkan_halaman():
+    # Initialize session state if not already initialized
+    if 'halaman' not in st.session_state:
+        st.session_state.halaman = 'utama'
 
     # Tombol di sidebar untuk kembali ke halaman utama
     with st.sidebar:
         if st.button("Halaman Utama"):
             st.session_state.halaman = 'utama'
-            st.experimental_rerun()
+            # Removed st.experimental_rerun() to prevent infinite loop
 
     # Menampilkan komponen file uploader
     uploaded_file = st.file_uploader("Upload file CSV", type=["csv"])
 
     # Menambahkan tombol Syarat dan Ketentuan
     if st.button("Panduan Penggunaan"):
-        if st.button("Tutup"):
-            st.session_state.show_terms = False
-        st.info("Berikut cara penggunaan aplikasi:")
-        st.text("1. File harus berformat CSV \n2. Untuk contoh isi file CSV seperti gambar ini :")
-        st.image("foto/image.png")
+        # Added a conditional statement to prevent nested buttons
+        if 'show_terms' not in st.session_state:
+            st.session_state.show_terms = True
+        else:
+            st.session_state.show_terms = not st.session_state.show_terms
+
+        if st.session_state.show_terms:
+            st.info("Berikut cara penggunaan aplikasi:")
+            st.text("1. File harus berformat CSV \n2. Untuk contoh isi file CSV seperti gambar ini :")
+            st.image("foto/image.png")
 
     # Jika file diunggah
     if uploaded_file is not None:
@@ -60,3 +68,5 @@ def tampilkan_halaman():
         st.pyplot(fig)
     else:
         st.info("Silakan unggah file CSV.")
+
+tampilkan_halaman()
