@@ -18,7 +18,7 @@ def tampilkan_halaman():
             st.session_state.show_terms = False
         st.info("Berikut cara penggunaan aplikasi:")
         st.text("1. File harus berformat CSV \n2. Untuk contoh isi file CSV seperti gambar ini :")
-        st.image("E:/magang/streamlit/foto/image.png")
+        st.image("foto/image.png")
 
     # Jika file diunggah
     if uploaded_file is not None:
