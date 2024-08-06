@@ -9,7 +9,6 @@ def tampilkan_halaman():
     with st.sidebar:
         if st.button("Halaman Utama"):
             st.session_state.halaman = 'utama'
-            st.experimental_rerun()
 
     # Menampilkan komponen file uploader
     uploaded_file = st.file_uploader("Upload file CSV", type=["csv"])
