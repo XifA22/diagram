@@ -2,7 +2,7 @@ import streamlit as st
 
 # Fungsi untuk halaman utama
 def halaman_utama():
-    st.title("Selamat Datang \n Silahkan pilih diagram yang ingin digunakan (double klik/tap:)")
+    st.title("Visualisasi Data \n Silahkan pilih diagram yang ingin digunakan (double klik/tap:)")
     if st.button("Diagram Lingkaran"):
         st.session_state['halaman'] = 'Diagram Lingkaran'
     if st.button("Diagram Batang"):
