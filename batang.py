@@ -18,7 +18,7 @@ def tampilkan_halaman():
 
     with col2:
         # Menampilkan gambar dari folder foto
-        st.image("E:/magang/visual/foto/logo.png", width=200)
+        st.image("foto/logo.png", width=200)
 
     # Menampilkan komponen file uploader
     uploaded_file = st.file_uploader("Upload file CSV", type=["csv"])
@@ -34,7 +34,7 @@ def tampilkan_halaman():
             st.session_state.show_terms = False
         st.info("Berikut cara penggunaan aplikasi:")
         st.text("1. File harus berformat CSV \n2. Untuk contoh isi file CSV seperti gambar ini :")
-        st.image("E:/magang/visual/foto/image.png")
+        st.image("foto/image.png")
 
     # Jika file diunggah
     if uploaded_file is not None:
