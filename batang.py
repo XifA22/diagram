@@ -6,7 +6,7 @@ def tampilkan_halaman():
 
     # Tombol di sidebar untuk kembali ke halaman utama
     with st.sidebar:
-        if st.button("Halaman Utama"):
+        if st.button("Kembali"):
             st.session_state.halaman = 'utama'
 
     # Membuat layout dua kolom
