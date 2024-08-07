@@ -9,6 +9,10 @@ def tampilkan_halaman():
         if st.button("Kembali"):
             st.session_state.halaman = 'utama'
 
+        if st.button("Kunjungi Satu Data Tulungagung"):
+            js = "window.open('https://satudata.tulungagung.go.id/')"
+            st.components.v1.html(f'<script>{js}</script>')
+
     # Menambahkan tombol untuk menuju halaman satudata.tulungagung.go.id
         if st.button("Kunjungi Satu Data Tulungagung"):
             st.markdown("[Klik di sini untuk mengunjungi Satu Data Tulungagung](https://satudata.tulungagung.go.id/)")
