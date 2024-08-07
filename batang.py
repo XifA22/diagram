@@ -9,6 +9,10 @@ def tampilkan_halaman():
         if st.button("Kembali"):
             st.session_state.halaman = 'utama'
 
+    # Menambahkan tombol untuk menuju halaman satudata.tulungagung.go.id
+        if st.button("Kunjungi Satu Data Tulungagung"):
+            st.markdown("[Klik di sini untuk mengunjungi Satu Data Tulungagung](https://satudata.tulungagung.go.id/)")
+
     # Membuat layout dua kolom
     col1, col2 = st.columns([1, 0.5])
     
