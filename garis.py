@@ -11,7 +11,7 @@ def tampilkan_halaman():
             st.session_state.halaman = 'utama'
             
     # Menambahkan tombol untuk menuju halaman satudata.tulungagung.go.id
-        st.markdown("[Klik di sini untuk mengunjungi Satu Data Tulungagung](https://satudata.tulungagung.go.id/)")
+        st.markdown("[Kunjungi Satu Data Tulungagung](https://satudata.tulungagung.go.id/)")
 
     # Membuat layout dua kolom
     col1, col2 = st.columns([1, 0.5])
