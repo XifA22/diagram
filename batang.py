@@ -17,7 +17,7 @@ def tampilkan_halaman():
     
     with col1:
         # Menampilkan tulisan "Diagram Lingkaran"
-        st.write("### Diagram Lingkaran")
+        st.write("### Diagram Batang")
 
     with col2:
         # Menampilkan gambar dari folder foto
